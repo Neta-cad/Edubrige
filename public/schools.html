@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schools Directory - EduBridge</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jobs.css">
+<link rel="stylesheet" href="css/schools.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Edu<span>Bridge</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="jobs.html">Jobs</a>
+        <a href="schools.html">Schools</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="upgrade.html">Pricing</a>
+      </nav>
+
+      <div class="nav-actions" id="navActions">
+        <a href="login.html" class="btn btn-outline">Log In</a>
+        <a href="register.html" class="btn btn-primary">Join Free</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="jobs-hero">
+    <h1>Discover Schools</h1>
+    <p>Browse schools and institutions on EduBridge</p>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by school name or location...">
+      <button id="searchBtn" class="btn btn-primary">Search</button>
+    </div>
+  </section>
+
+  <section class="jobs-section">
+    <div class="schools-grid" id="schoolsListContainer">
+      <p>Loading schools...</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Edu<span>Bridge</span></h3>
+        <p>Connecting schools, educators, and learners worldwide.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Platform</h4>
+          <a href="jobs.html">Jobs</a>
+          <a href="schools.html">Schools</a>
+          <a href="tutors.html">Tutors</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 EduBridge. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/schools.js"></script>
+</body>
+</html>

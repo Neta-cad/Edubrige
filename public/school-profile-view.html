@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Profile - EduBridge</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jobs.css">
+<link rel="stylesheet" href="css/schools.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Edu<span>Bridge</span></a>
+      <div class="nav-actions">
+        <a href="schools.html" class="btn btn-outline">Back to Schools</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="schoolProfileContainer">
+    <p style="text-align:center; padding: 60px 24px;">Loading school profile...</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Edu<span>Bridge</span></h3>
+        <p>Connecting schools, educators, and learners worldwide.</p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 EduBridge. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/school-profile-view.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* ===== SCHOOLS GRID ===== */
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.school-card {
+  background: var(--white);
+  border: 1.5px solid #eef0f4;
+  border-radius: 16px;
+  padding: 32px 26px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  text-align: center;
+}
+
+.school-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.school-logo {
+  width: 64px;
+  height: 64px;
+  background: var(--navy);
+  color: var(--gold);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 auto 18px;
+}
+
+.school-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.verified-tick {
+  color: #16a34a;
+  font-size: 0.9rem;
+}
+
+.school-type-label {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.school-card .job-location {
+  margin-bottom: 18px;
+}
+
+/* ===== SCHOOL PROFILE VIEW ===== */
+.school-view-header {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 70px 24px 60px;
+}
+
+.school-view-logo {
+  width: 90px;
+  height: 90px;
+  background: var(--navy-light);
+  color: var(--gold);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.school-view-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.school-view-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  color: #9aa3b5;
+  font-size: 0.92rem;
+}
+
+.school-view-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.school-view-body h3 {
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  color: var(--navy);
+}
+
+.school-view-body p {
+  color: var(--gray-text);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}

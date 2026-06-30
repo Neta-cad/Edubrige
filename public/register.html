@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account - EduBridge</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Edu<span>Bridge</span></a>
+    </div>
+  </header>
+
+  <section class="auth-section">
+    <div class="auth-card">
+      <h1>Create Your Account</h1>
+      <p class="auth-subtitle">Join EduBridge and start connecting today</p>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="Create a password" required minlength="6">
+        </div>
+
+        <div class="form-group">
+          <label>I am a...</label>
+          <select id="role" required>
+            <option value="">Select your role</option>
+            <option value="school">School Owner / Institution</option>
+            <option value="job_seeker">Job Seeker (Teacher/Staff)</option>
+            <option value="tutor">Private Tutor</option>
+            <option value="student">Student / Parent</option>
+          </select>
+        </div>
+
+        <div id="errorMsg" class="error-msg"></div>
+
+        <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+      </form>
+
+      <p class="auth-footer">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

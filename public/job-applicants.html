@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Applicants - EduBridge</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jobs.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Edu<span>Bridge</span></a>
+      <div class="nav-actions">
+        <a href="my-jobs.html" class="btn btn-outline">Back to My Jobs</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-section">
+    <div class="dashboard-header">
+      <h1 id="jobTitleHeader">Applicants</h1>
+    </div>
+
+    <div id="applicantsContainer">
+      <p>Loading applicants...</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/job-applicants.js"></script>
+</body>
+</html>

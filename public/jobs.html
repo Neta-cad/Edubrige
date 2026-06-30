@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Jobs - EduBridge</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jobs.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Edu<span>Bridge</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="jobs.html">Jobs</a>
+        <a href="schools.html">Schools</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="upgrade.html">Pricing</a>
+      </nav>
+
+      <div class="nav-actions" id="navActions">
+        <a href="login.html" class="btn btn-outline">Log In</a>
+        <a href="register.html" class="btn btn-primary">Join Free</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="jobs-hero">
+    <h1>Find Your Next Teaching Role</h1>
+    <p>Browse open positions from schools and tutors across EduBridge</p>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by title, subject, or location...">
+      <button id="searchBtn" class="btn btn-primary">Search</button>
+    </div>
+  </section>
+
+  <section class="jobs-section">
+    <div class="jobs-filters">
+      <select id="filterType">
+        <option value="">All Job Types</option>
+        <option value="full_time">Full Time</option>
+        <option value="part_time">Part Time</option>
+        <option value="contract">Contract</option>
+        <option value="volunteer">Volunteer</option>
+      </select>
+    </div>
+
+    <div class="jobs-list" id="jobsListContainer">
+      <p>Loading jobs...</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Edu<span>Bridge</span></h3>
+        <p>Connecting schools, educators, and learners worldwide.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Platform</h4>
+          <a href="jobs.html">Jobs</a>
+          <a href="schools.html">Schools</a>
+          <a href="tutors.html">Tutors</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 EduBridge. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jobs.js"></script>
+</body>
+</html>
