@@ -8,6 +8,8 @@ if (registerForm) {
   registerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    alert('Button clicked - starting registration...');
+
     const fullName = document.getElementById('fullName').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
@@ -21,6 +23,8 @@ if (registerForm) {
       return;
     }
 
+    alert('Form filled correctly. Connecting to Supabase...');
+
     // Step 1: Create the auth user
     const { data, error } = await supabaseClient.auth.signUp({
       email: email,
@@ -28,10 +32,12 @@ if (registerForm) {
     });
 
     if (error) {
+      alert('Supabase Error: ' + error.message);
       errorMsg.textContent = error.message;
       return;
     }
 
+    alert('Account created! Check your email.');
     const userId = data.user.id;
 
     // Step 2: Create their profile row
@@ -48,36 +54,12 @@ if (registerForm) {
       ]);
 
     if (profileError) {
+      alert('Profile Error: ' + profileError.message);
       errorMsg.textContent = profileError.message;
       return;
     }
 
-    alert('Account created! Please check your email to confirm your account, then log in.');
+    alert('Account created! Please check your email to confirm.');
     window.location.href = 'login.html';
-  });
-}
-
-// ===== LOGIN =====
-if (loginForm) {
-  loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById('loginEmail').value.trim();
-    const password = document.getElementById('loginPassword').value;
-    const errorMsg = document.getElementById('errorMsg');
-
-    errorMsg.textContent = '';
-
-    const { data, error } = await supabaseClient.auth.signInWithPassword({
-      email: email,
-      password: password,
-    });
-
-    if (error) {
-      errorMsg.textContent = error.message;
-      return;
-    }
-
-    window.location.href = 'dashboard.html';
   });
 }
